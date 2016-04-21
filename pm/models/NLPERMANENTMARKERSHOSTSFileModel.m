@@ -248,7 +248,7 @@ NSMutableArray * NLPERMANENTMARKERSHOSTShostsEntries;
 - (void)dealloc
 {
     NLPERMANENTMARKERSHOSTShostsEntries = nil;
-    
+    [super dealloc];
 }
 
 @end
