@@ -16,12 +16,11 @@ profile
 
 c/parser/hosts
 c/parser/hosts\.dSYM
-c/parser/hostsparser\.o
+c/parser/*.o
 c/parser/hostsparser\.output
 c/parser/hostsparser\.tab\.c
 c/parser/hostsparser\.tab\.h
 c/parser/hostsscanner\.h
 c/parser/lex\.yy\.c
 c/parser/lex.NLPERMANENTMARKERSHOSTS.c
-pm/.DS_Store
 .DS_Store
