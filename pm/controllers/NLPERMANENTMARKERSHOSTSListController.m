@@ -65,7 +65,15 @@
                                                        @"PMHostListController",
                                                        @"deletion: message format string");
     description = [NSString stringWithFormat:description, [entry toString]];
-    NSAlert *alert = [NSAlert alertWithMessageText:title defaultButton:@"Yes" alternateButton:@"No" otherButton:nil informativeTextWithFormat:description];
+    NSAlert *alert = [[NSAlert alloc] init];
+                      [alert addButtonWithTitle:@"Yes"];
+                      [alert addButtonWithTitle:@"No"];
+                      [alert setMessageText:title];
+                      [alert setInformativeText:description];
+                      [alert setAlertStyle:NSWarningAlertStyle];
+                      
+                      //alertWithMessageText:title defaultButton:@"Yes" alternateButton:@"No" otherButton:nil informativeTextWithFormat:description];
+    
     [alert beginSheetModalForWindow:[[NSApplication sharedApplication] mainWindow] modalDelegate:self didEndSelector:@selector(alertEnded:code:context:) contextInfo:NULL];
 }
 
